@@ -420,8 +420,5 @@ body {
 }
 
 #world-map {
-  width: 90%;
-  height: 700px;
-  margin: 0 5%;
   display: block;
 }
