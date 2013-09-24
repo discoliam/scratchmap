@@ -1,0 +1,24 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# SASS Nonsense #
+#################
+public
+.sass-cache
+/assets/sass/*.css
+
+# Grunt #
+#################
+node_modules
+
+# Sublime #
+###########
+*.sublime-project
+*.sublime-workspace

@@ -1,0 +1,18 @@
+// Vendor
+@import "_normalize.scss";
+@import "jquery-jvectormap-1.2.2.scss";
+
+// Custom
+
+// Map Size
+body{
+  background: #505050;
+  color: #fff;
+}
+
+#world-map {
+  width: 90%;
+  height: 700px;
+  margin: 0 5%;
+  display: block;
+}
