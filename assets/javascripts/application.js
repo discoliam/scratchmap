@@ -10,7 +10,7 @@ function resizeMap() {
   windowWidth = $(window).width();
   windowHeight = $(window).height();
   worldMap.width(windowWidth - 20 );
-  worldMap.height(windowHeight - 20 );
+  worldMap.height(windowHeight - 100 );
 }
 
 
