@@ -48,6 +48,7 @@ module.exports = function(grunt) {
                 '<%= meta.srcPath %>/javascripts/jquery-jvectormap-1.2.2.min.js',
                 '<%= meta.srcPath %>/javascripts/jquery-jvectormap-world-mill-en.js',
                 '<%= meta.srcPath %>/javascripts/application.js',
+                '<%= meta.srcPath %>/javascripts/gdp-data.js',
 
               ]
             }

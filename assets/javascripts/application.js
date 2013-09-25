@@ -1,25 +1,40 @@
+// Application JS
+
+// VARS
+var worldMap = $('#world-map');
+var windowWidth = $(window).width();
+var windowHeight = $(window).height();
+
+// Resize Map Function
+function resizeMap() {
+  windowWidth = $(window).width();
+  windowHeight = $(window).height();
+  worldMap.width(windowWidth - 20 );
+  worldMap.height(windowHeight - 20 );
+}
+
+
+// Document Ready
 $( document ).ready(function() {
-    
-    // VARS
-    var worldMap = $('#world-map');
-    var windowWidth = $(window).width();
-    var windowHeight = $(window).height();
+  
+  // Resize Map
+  resizeMap();
 
-    // Resize Map Function
-    function resizeMap() {
-      worldMap.width(windowWidth - 20 );
-      worldMap.height(windowHeight - 20 );
+  // Draw Map
+  worldMap.vectorMap({
+    map: 'world_mill_en',
+    series: {
+      regions: [{
+        values: gdpData,
+        scale: ['#C8EEFF', '#0071A4'],
+        normalizeFunction: 'polynomial'
+      }]
     }
-
-    resizeMap();
-
-    // Draw Map
-    $(function(){
-      $('#world-map').vectorMap();
-    }); 
+  });
 
 });
 
+// Window Resize
 $(window).resize(function() {
   resizeMap();
 });
