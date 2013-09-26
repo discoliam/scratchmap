@@ -25,8 +25,8 @@ $( document ).ready(function() {
     map: 'world_mill_en',
     series: {
       regions: [{
-        values: gdpData,
-        scale: ['#C8EEFF', '#0071A4'],
+        values: visitedData,
+        scale: ['#ffffff', '#0071A4'],
         normalizeFunction: 'polynomial'
       }]
     }
