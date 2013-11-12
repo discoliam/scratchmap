@@ -9,8 +9,8 @@ var windowHeight = $(window).height();
 function resizeMap() {
   windowWidth = $(window).width();
   windowHeight = $(window).height();
-  worldMap.width(windowWidth - 20 );
-  worldMap.height(windowHeight - 100 );
+  // worldMap.width(windowWidth - 20 );
+  worldMap.height(windowHeight - 300 );
 }
 
 
@@ -23,10 +23,12 @@ $( document ).ready(function() {
   // Draw Map
   worldMap.vectorMap({
     map: 'world_mill_en',
+    backgroundColor: '#3498DB',
+    zoomOnScroll: false,
     series: {
       regions: [{
         values: visitedData,
-        scale: ['#ffffff', '#0071A4'],
+        scale: ['#ECF0F1', '#27AE60'],
         normalizeFunction: 'polynomial'
       }]
     },

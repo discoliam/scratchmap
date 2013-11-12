@@ -1,25 +1,28 @@
 // Vendor
 @import "_normalize.scss";
 @import "jquery-jvectormap-1.2.2.scss";
+@import "bootstrap.scss";
+@import "flat-ui.scss";
 
-// Custom
-
-// Map Size
-body{
-  background: #505050;
-  color: #fff;
+@mixin rounder-corners {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
 
+
+
+// Map
 #world-map {
-  // width: 90%;
-  // height: 700px;
-  // margin: 0 5%;
   display: block;
+  @include rounder-corners;
 }
 
-#fun{
-  width: 200px;
-  height: 200px;
-  background: white;
-  color: black;
+// Custom Modal
+.popup{
+  width: 400px;
+  background: #34495E;
+  padding: 20px;
+  color: #fff;
+  @include rounder-corners;
 }
