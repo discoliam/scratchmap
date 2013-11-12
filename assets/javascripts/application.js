@@ -29,8 +29,35 @@ $( document ).ready(function() {
         scale: ['#ffffff', '#0071A4'],
         normalizeFunction: 'polynomial'
       }]
+    },
+    onRegionLabelShow: function(e, el){
+      el.html(el.html());
+    },
+    onRegionClick: function(event, code){
+      var map = worldMap.vectorMap('get', 'mapObject');
+      // alert(map.getRegionName(code));
+      $('#fun').find("h1").text(map.getRegionName(code));
+      $('#fun').trigger('openModal');
     }
   });
+
+
+  $('#fun').easyModal({
+    overlay : 0.4,
+    overlayClose: false
+  });
+
+
+  $('#modal-test').click(function(e){
+    $('#fun').trigger('openModal');
+    e.preventDefault();
+  });
+
+  $('#close').click(function(e){
+    $('#fun').trigger('closeModal');
+    e.preventDefault();
+  });
+
 
 });
 

@@ -38,33 +38,33 @@ module.exports = function(grunt) {
 
 
 
-       uglify: {
-          options: {
-            mangle: false
-          },
-          my_target: {
-            files: {
-              '<%= meta.srcPath %>/build/application.min.js':[
-                '<%= meta.srcPath %>/javascripts/jquery-jvectormap-1.2.2.min.js',
-                '<%= meta.srcPath %>/javascripts/jquery-jvectormap-world-mill-en.js',
-                '<%= meta.srcPath %>/javascripts/application.js',
-                '<%= meta.srcPath %>/javascripts/gdp-data.js',
-                '<%= meta.srcPath %>/javascripts/visited.js',
-
-              ]
-            }
-          }
-        },
+       // uglify: {
+       //    options: {
+       //      mangle: false
+       //    },
+       //    my_target: {
+       //      files: {
+       //        '<%= meta.srcPath %>/build/application.min.js':[
+       //          '<%= meta.srcPath %>/javascripts/jquery-jvectormap-1.2.2.min.js',
+       //          '<%= meta.srcPath %>/javascripts/jquery-jvectormap-world-mill-en.js',
+       //          '<%= meta.srcPath %>/javascripts/application.js',
+       //          '<%= meta.srcPath %>/javascripts/gdp-data.js',
+       //          '<%= meta.srcPath %>/javascripts/visited.js',
+       //          '<%= meta.srcPath %>/javascripts/jquery.easyModal.js',
+       //        ]
+       //      }
+       //    }
+       //  },
  
         watch: {
             sass: {
                 files: ['<%= meta.srcPath %>/**/*.scss'],
                 tasks: ['sass:dev']
-            },
-            javascripts: {
-              files: ['<%= meta.srcPath %>/javascripts/**/*.js'],
-              tasks: ['uglify']
             }
+            // javascripts: {
+            //   files: ['<%= meta.srcPath %>/javascripts/**/*.js'],
+            //   tasks: ['uglify']
+            // }
         }
  
     });
