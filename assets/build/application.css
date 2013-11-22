@@ -232,7 +232,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -379,7 +379,7 @@ table {
 .jvectormap-label {
   position: absolute;
   display: none;
-  border: solid 1px #CDCDCD;
+  border: solid 1px #cdcdcd;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -556,7 +556,7 @@ figure {
 fieldset {
   padding: 0.35em 0.625em 0.75em;
   margin: 0 2px;
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
 }
 
 legend {
@@ -632,7 +632,7 @@ table {
 
 @media print {
   * {
-    color: #000 !important;
+    color: black !important;
     text-shadow: none !important;
     background: transparent !important;
     box-shadow: none !important;
@@ -659,7 +659,7 @@ table {
 
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
@@ -677,7 +677,7 @@ table {
   }
 
   @page {
-    margin: 2cm .5cm;
+    margin: 2cm 0.5cm;
 }
 
   p,
@@ -698,16 +698,16 @@ table {
 
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: white !important;
   }
 
   .btn > .caret,
   .dropup > .btn > .caret {
-    border-top-color: #000 !important;
+    border-top-color: black !important;
   }
 
   .label {
-    border: 1px solid #000;
+    border: 1px solid black;
   }
 
   .table {
@@ -716,7 +716,7 @@ table {
 
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #ddd !important;
+    border: 1px solid #dddddd !important;
   }
 }
 *,
@@ -761,7 +761,7 @@ a:focus {
 }
 
 a:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2267,7 +2267,7 @@ select optgroup {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2607,7 +2607,7 @@ textarea.input-lg {
 }
 
 .btn:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3810,7 +3810,7 @@ input[type="button"].btn-block {
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top: 4px solid #000000;
+  border-top: 4px solid black;
   border-right: 4px solid transparent;
   border-bottom: 0 dotted;
   border-left: 4px solid transparent;
@@ -3931,7 +3931,7 @@ input[type="button"].btn-block {
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0 dotted;
-  border-bottom: 4px solid #000000;
+  border-bottom: 4px solid black;
   content: "";
 }
 
@@ -5466,7 +5466,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .label {
   display: inline;
-  padding: .2em .6em .3em;
+  padding: 0.2em 0.6em 0.3em;
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
@@ -6293,7 +6293,7 @@ a.list-group-item:focus {
   font-weight: bold;
   line-height: 1;
   color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
+  text-shadow: 0 1px 0 white;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
@@ -6871,7 +6871,7 @@ button.close {
   margin: 1px;
   text-indent: -999px;
   cursor: pointer;
-  border: 1px solid #ffffff;
+  border: 1px solid white;
   border-radius: 10px;
 }
 
@@ -8599,8 +8599,8 @@ fieldset[disabled] .btn-link:focus {
   line-height: 28px;
   padding: 22px 20px;
   text-shadow: none;
-  -webkit-transition: background-color .25s, color .25s, border-bottom-color .25s;
-  transition: background-color .25s, color .25s, border-bottom-color .25s;
+  -webkit-transition: background-color 0.25s, color 0.25s, border-bottom-color 0.25s;
+  transition: background-color 0.25s, color 0.25s, border-bottom-color 0.25s;
 }
 
 .navbar .nav > li > a:hover,
@@ -8844,8 +8844,8 @@ fieldset[disabled] .btn-link:focus {
 }
 
 .navbar.navbar-inverse .nav li.dropdown.open > .dropdown-toggle .caret {
-  border-bottom-color: #ffffff !important;
-  border-top-color: #ffffff !important;
+  border-bottom-color: white !important;
+  border-top-color: white !important;
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle {
@@ -9207,8 +9207,8 @@ label {
   border-radius: 6px;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
-  transition: border .25s linear, color .25s linear, background-color .25s linear;
+  -webkit-transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+  transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
 }
 
 .form-group.focus .form-control,
@@ -10038,8 +10038,8 @@ fieldset[disabled] .form-control + .input-icon,
   min-height: 16px;
   padding: 0 4px;
   border-radius: 50px;
-  -webkit-transition: background .2s ease-out, border-color 0s ease-out, color .2s ease-out;
-  transition: background .2s ease-out, border-color 0s ease-out, color .2s ease-out;
+  -webkit-transition: background 0.2s ease-out, border-color 0s ease-out, color 0.2s ease-out;
+  transition: background 0.2s ease-out, border-color 0s ease-out, color 0.2s ease-out;
 }
 
 .pagination ul li > a:hover,
@@ -10049,8 +10049,8 @@ fieldset[disabled] .form-control + .input-icon,
   background-color: #1abc9c;
   border-color: #1abc9c;
   color: #ffffff;
-  -webkit-transition: background .2s ease-out, border-color .2s ease-out, color .2s ease-out;
-  transition: background .2s ease-out, border-color .2s ease-out, color .2s ease-out;
+  -webkit-transition: background 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
+  transition: background 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
 }
 
 .pagination ul li > a:active,
@@ -11014,8 +11014,8 @@ body.vjs-full-window {
 .vjs-fade-in {
   visibility: visible !important;
   opacity: 1 !important;
-  -webkit-transition: visibility 0s linear 0s, opacity .3s linear;
-  transition: visibility 0s linear 0s, opacity .3s linear;
+  -webkit-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  transition: visibility 0s linear 0s, opacity 0.3s linear;
 }
 
 .vjs-fade-out {
@@ -11098,8 +11098,8 @@ body.vjs-full-window {
   top: 50%;
   left: 50%;
   margin: -0.55em 0 0 -0.5em;
-  -webkit-transition: color .25s, opacity .25s;
-  transition: color .25s, opacity .25s;
+  -webkit-transition: color 0.25s, opacity 0.25s;
+  transition: color 0.25s, opacity 0.25s;
 }
 
 .vjs-play-control div:after {
@@ -11147,7 +11147,7 @@ body.vjs-full-window {
   width: 19px;
   height: 16px;
   background: none transparent;
-  margin: .5em auto 0;
+  margin: 0.5em auto 0;
 }
 
 .vjs-mute-control {
@@ -11869,6 +11869,20 @@ footer p {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+}
+
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+  width: 20px;
+  height: 20px;
+}
+
+.jvectormap-zoomout {
+  top: 40px;
+}
+
+nav {
+  padding-top: 47px;
 }
 
 .popup {

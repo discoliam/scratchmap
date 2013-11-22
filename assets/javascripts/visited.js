@@ -189,7 +189,6 @@ var visitedData = {
   "FK": 0, //Falkland Islands,
   "KP": 0, //North Korea
   "PF": 0, //French Poly
-
   "NC": 0, //New Calodonia
   "EH": 0, //Westan Saraha
 };

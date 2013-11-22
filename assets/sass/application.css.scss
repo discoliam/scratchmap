@@ -10,14 +10,26 @@
   border-radius: 6px;
 }
 
-
-
 // Map
 #world-map {
   display: block;
   @include rounder-corners;
 }
 
+// Map Amends
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+  width: 20px;
+  height: 20px;
+}
+.jvectormap-zoomout {top: 40px;}
+
+
+// Nav
+
+nav{
+  padding-top: 47px;
+}
 // Custom Modal
 .popup{
   width: 400px;

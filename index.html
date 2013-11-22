@@ -7,24 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
     <link rel="stylesheet" href="/assets/build/application.css" type="text/css" media="screen"/>
 
   </head>
   <body>
 
     <div class="container">
-
       <div class="row">
         <div class="col-md-6"><h1>Scratchmap</h1></div>
-        <div class="col-md-6"><a href="#about" class="btn btn-primary">About</a></div>
-      </div>
-
-
-      <div class="row">
-        <div class="span12">
-          
-        </div>
+        <nav class="col-md-6"><a href="#about" class="btn btn-primary">About</a></nav>
       </div>
 
       <div class="row">
@@ -35,9 +26,24 @@
       </div>
 
       <div class="row">
+        <div class="col-md-6">
+          <a class="reset">Reset Zoom</a>
+        </div>
+        <div class="col-md-6">
+          <p><strong>World Total</strong></p>
+          <p class="percentage">You have been to <i>30%</i> of the world.</p> 
+          <canvas id="myChart" width="200" height="200"></canvas>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="row">
         <div class="col-md-12">
           <footer>
-            <p class="pull-left"><a href="http://www.discoliam.com">Discoliam</a> made this for Rowena Farr.</p>
+            <p class="pull-left"><a href="http://www.discoliam.com">Discoliam</a> made this.</p>
             <p class="pull-right"><span class="label label-default">v0.0.1</span> &bull; <a href="#">Colophon</a></p>
           </footer>
         </div>
@@ -58,6 +64,7 @@
     <script src="/assets/javascripts/gdp-data.js"></script>
     <script src="/assets/javascripts/visited.js"></script>
     <script src="/assets/javascripts/jquery.easyModal.js"></script>
+    <script src="/assets/javascripts/chart.min.js"></script>
     <script src="/assets/javascripts/application.js"></script>
   </body>
 </html>

@@ -25,6 +25,7 @@ $( document ).ready(function() {
     map: 'world_mill_en',
     backgroundColor: '#3498DB',
     zoomOnScroll: false,
+    regionsSelectable: true,
     series: {
       regions: [{
         values: visitedData,
@@ -37,10 +38,19 @@ $( document ).ready(function() {
     },
     onRegionClick: function(event, code){
       var map = worldMap.vectorMap('get', 'mapObject');
-      // alert(map.getRegionName(code));
+      map.clearSelectedRegions();
       $('#fun').find("h1").text(map.getRegionName(code));
       $('#fun').trigger('openModal');
+      map.setFocus(code);
+      // console.log(code);
     }
+  });
+
+
+  $('a.reset').click(function(){
+    var map = worldMap.vectorMap('get', 'mapObject');
+    map.clearSelectedRegions();
+    map.setFocus(1,0,0);
   });
 
 
@@ -61,7 +71,54 @@ $( document ).ready(function() {
   });
 
 
-});
+// PERCENTAGES
+//----------------------------
+var i=0;
+var visited = 0;
+for (var x in visitedData){
+  if(visitedData.hasOwnProperty(x)){
+    i++;
+    if (visitedData[x] == 1){
+      visited++;
+    }
+  }
+}
+var percentage = (visited / i) * 100;
+var roundedPercenttage = Math.round(percentage);
+var whatsLeft = 100 - roundedPercenttage;
+console.log("Total: " + i + " Visited: " + visited + " Percentage: " + roundedPercenttage + "% Left: " + whatsLeft + "%.");
+
+$(".percentage").find("i").html(roundedPercenttage + "%");
+
+
+// CHART JS 
+// ---------------------------------
+var data = [
+  {
+    value: roundedPercenttage,
+    color:"#E74C3C"
+  },
+  {
+    value : whatsLeft,
+    color : "#ECF0F1"
+  }
+];
+
+var settings = {
+  segmentShowStroke : false,
+  animateScale : true,
+};
+
+function showChart(){
+  var ctx = document.getElementById("myChart").getContext("2d");
+  new Chart(ctx).Pie(data,settings);
+};
+
+showChart();
+
+
+
+}); //eo:doc ready
 
 // Window Resize
 $(window).resize(function() {
