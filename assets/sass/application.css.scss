@@ -1,40 +1,67 @@
-// Vendor
-@import "_normalize.scss";
-@import "jquery-jvectormap-1.2.2.scss";
-@import "bootstrap.scss";
-@import "flat-ui.scss";
-
+// MIXINS 
 @mixin rounder-corners {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
+
+// HEADER 
+.stats{padding-top: 57px;}
+#myChart {margin-top: 32px;}
+
 
 // Map
 #world-map {
   display: block;
   @include rounder-corners;
+  position: relative;
+  margin-bottom: 40px;
 }
 
-// Map Amends
-.jvectormap-zoomin,
-.jvectormap-zoomout {
-  width: 20px;
-  height: 20px;
+// Map Label
+.jvectormap-label {
+  position: absolute;
+  display: none;
+  border: solid 1px #CDCDCD;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #292929;
+  color: white;
+  font-family: sans-serif, Verdana;
+  font-size: smaller;
+  padding: 3px;
 }
+
+// Buttons
+.jvectormap-zoomin,
+.jvectormap-zoomout,
+.reset {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #292929;
+  color: #fff;
+  cursor: pointer;
+  line-height: 15px;
+  font-size: 15px;
+  padding: 1px 4px 2px 4px;
+  text-align: center;
+  &:hover{background: #18bc9c;color: #fff;text-decoration: none;}
+  }
+
 .jvectormap-zoomout {top: 40px;}
 
+.reset{left: auto;right: 10px;z-index: 999;}
 
-// Nav
 
-nav{
-  padding-top: 47px;
-}
-// Custom Modal
-.popup{
-  width: 400px;
-  background: #34495E;
-  padding: 20px;
-  color: #fff;
-  @include rounder-corners;
+
+// FOOTER
+footer{
+  margin-top: 40px;
+  padding: 40px 0;
+  border-top: 1px solid #ecf0f1;
 }

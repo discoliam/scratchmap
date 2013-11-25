@@ -7,63 +7,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="/assets/build/application.css" type="text/css" media="screen"/>
 
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.1/flatly/bootstrap.min.css" type="text/css" media="screen"/>
+
+    <link rel="stylesheet" href="/assets/build/application.css" type="text/css" media="screen"/>
   </head>
   <body>
 
     <div class="container">
       <div class="row">
-        <div class="col-md-6"><h1>Scratchmap</h1></div>
-        <nav class="col-md-6"><a href="#about" class="btn btn-primary">About</a></nav>
+        <div class="col-md-6">
+          <div class="page-header">
+            <h1>Scratch Map <small>well, a virtual one at least</small></h1>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p class="stats pull-left">
+            You have visited <em class="visited label label-primary">##</em> of <em class="total label label-primary">##</em> countries in the world, or roughly <em class="percentage label label-primary">##%</em>.</p> 
+          <canvas id="myChart" width="75" height="75" class="pull-right"></canvas>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <p>Click on a country to learn about it.</p>
+        </div>
       </div>
 
       <div class="row">
         <div class="col-md-12">
           <div id="world-map">
+            <a class="reset"><i class="fa fa-undo"></i></a>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <a class="reset">Reset Zoom</a>
-        </div>
-        <div class="col-md-6">
-          <p><strong>World Total</strong></p>
-          <p class="percentage">You have visited <i>##%</i> of the countries in the world.</p> 
-          <canvas id="myChart" width="200" height="200"></canvas>
+      <div class="row" id="country-details">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 id="country-name">Country Name</h3>
+            </div>
+            <div class="panel-body">
+            <dl class="dl-horizontal">
+              <dt>Capital City:</dt>
+              <dd id="capital-city">Lorem</dd>
+              <dt>Population:</dt>
+              <dd id="population">##</dd>
+              <dt>Currency:</dt>
+              <dd id="currency">Lorem</dd>
+              <dt>Timezones:</dt>
+              <dd id="time-zone">##</dd>
+            </dl>
+            </div>
+          </div>
         </div>
       </div>
 
-
-
-
-
-      <div class="row">
-        <div class="col-md-12">
-          <footer>
-            <p class="pull-left"><a href="http://www.discoliam.com">Discoliam</a> made this.</p>
-            <p class="pull-right"><span class="label label-default">v0.0.1</span> &bull; <a href="#">Colophon</a></p>
-          </footer>
-        </div>
-      </div>  
     </div>
 
+    <footer>
+      <div class="container">    
+        <p class="pull-left"><a href="http://www.discoliam.com">Discoliam</a> made this.&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2013</p>
+        <p class="pull-right"><span class="label label-default">v0.0.1</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Colophon</a></p>
+      </div>
+    </footer>
 
-   
 
-    <div id="fun" class="popup">
-      <h1>Fun</h1>
-      <a href="#" id="close" class="btn btn-primary">Close</a>
-    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/assets/javascripts/jquery-jvectormap-1.2.2.min.js"></script>
     <script src="/assets/javascripts/jquery-jvectormap-world-mill-en.js"></script>
     <script src="/assets/javascripts/gdp-data.js"></script>
     <script src="/assets/javascripts/visited.js"></script>
-    <script src="/assets/javascripts/jquery.easyModal.js"></script>
     <script src="/assets/javascripts/chart.min.js"></script>
     <script src="/assets/javascripts/application.js"></script>
   </body>

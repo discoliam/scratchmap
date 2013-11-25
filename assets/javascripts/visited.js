@@ -6,7 +6,7 @@ var visitedData = {
   "AG": 0,
   "AR": 0,
   "AM": 0,
-  "AU": 0,
+  "AU": 1,
   "AT": 0,
   "AZ": 0,
   "BS": 0,
@@ -14,7 +14,7 @@ var visitedData = {
   "BD": 0,
   "BB": 0,
   "BY": 0,
-  "BE": 1,
+  "BE": 0,
   "BZ": 0,
   "BJ": 0,
   "BT": 0,
@@ -28,7 +28,7 @@ var visitedData = {
   "BI": 0,
   "KH": 0,
   "CM": 0,
-  "CA": 0,
+  "CA": 1,
   "CV": 0,
   "CF": 0,
   "TD": 0,
@@ -40,8 +40,8 @@ var visitedData = {
   "CG": 0,
   "CR": 0,
   "CI": 0,
-  "HR": 0,
-  "CY": 1,
+  "HR": 1,
+  "CY": 0,
   "CZ": 0,
   "DK": 0,
   "DJ": 0,
@@ -77,9 +77,9 @@ var visitedData = {
   "ID": 0,
   "IR": 0,
   "IQ": 0,
-  "IE": 0,
+  "IE": 1,
   "IL": 0,
-  "IT": 1,
+  "IT": 0,
   "JM": 0,
   "JP": 0,
   "JO": 0,
@@ -115,8 +115,8 @@ var visitedData = {
   "MM": 0,
   "NA": 0,
   "NP": 0,
-  "NL": 1,
-  "NZ": 0,
+  "NL": 0,
+  "NZ": 1,
   "NI": 0,
   "NE": 0,
   "NG": 0,
@@ -129,7 +129,7 @@ var visitedData = {
   "PE": 0,
   "PH": 0,
   "PL": 0,
-  "PT": 0,
+  "PT": 1,
   "QA": 0,
   "RO": 0,
   "RU": 0,
@@ -141,7 +141,7 @@ var visitedData = {
   "RS": 0,
   "SC": 0,
   "SL": 0,
-  "SG": 0,
+  "SG": 1,
   "SK": 0,
   "SI": 0,
   "SB": 0,
@@ -160,7 +160,7 @@ var visitedData = {
   "TW": 0,
   "TJ": 0,
   "TZ": 0,
-  "TH": 0,
+  "TH": 1,
   "TL": 0,
   "TG": 0,
   "TO": 0,
@@ -190,5 +190,11 @@ var visitedData = {
   "KP": 0, //North Korea
   "PF": 0, //French Poly
   "NC": 0, //New Calodonia
-  "EH": 0, //Westan Saraha
+  "EH": 0, //Westan Saraha,
+  "SS": 0, // South Sudan
+  "PS": 0, //State of Palestine
+  "_0": 0, // Northern Cyprus
+  "_1": 0, // Kosovo
+  "_2": 0, //Western Sahara
+  "_3": 0 // Somaliand
 };
