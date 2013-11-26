@@ -27,15 +27,20 @@ $( document ).ready(function() {
   // Draw Map
   worldMap.vectorMap({
     map: 'world_mill_en',
-    backgroundColor: '#3498DB',
+    backgroundColor: '#3498db',
     zoomOnScroll: false,
     regionsSelectable: true,
     series: {
       regions: [{
         values: visitedData,
-        scale: ['#ECF0F1', '#27AE60'],
+        scale: ['#ecf0f1', '#18bc9c'],
         normalizeFunction: 'polynomial'
       }]
+    },
+    regionStyle: {
+      selected: {
+        fill: '#f39c12'
+      }
     },
     onRegionLabelShow: function(e, el){
       el.html(el.html());
@@ -88,11 +93,11 @@ $( document ).ready(function() {
   var data = [
     {
       value: roundedPercenttage,
-      color:"#E74C3C"
+      color:"#e74c3c"
     },
     {
       value : whatsLeft,
-      color : "#ECF0F1"
+      color : "#ecf0f1"
     }
   ];
 

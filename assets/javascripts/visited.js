@@ -160,7 +160,8 @@ var visitedData = {
   "TW": 0,
   "TJ": 0,
   "TZ": 0,
-  "TH": 1,
+  "TH": 1
+  ,
   "TL": 0,
   "TG": 0,
   "TO": 0,

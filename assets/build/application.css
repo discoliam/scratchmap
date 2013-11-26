@@ -1,9 +1,17 @@
 .stats {
-  padding-top: 57px;
+  padding-top: 37px;
 }
 
 #myChart {
-  margin-top: 32px;
+  margin-top: 12px;
+}
+
+.page-header a {
+  color: #2c3e50;
+}
+.page-header a:hover {
+  text-decoration: none;
+  color: #18bc9c;
 }
 
 #world-map {
@@ -18,15 +26,14 @@
 .jvectormap-label {
   position: absolute;
   display: none;
-  border: solid 1px #cdcdcd;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #292929;
+  background: #2c3e50;
   color: white;
   font-family: sans-serif, Verdana;
   font-size: smaller;
-  padding: 3px;
+  padding: 3px 6px;
 }
 
 .jvectormap-zoomin,
@@ -38,7 +45,7 @@
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #292929;
+  background: #2c3e50;
   color: #fff;
   cursor: pointer;
   line-height: 15px;
