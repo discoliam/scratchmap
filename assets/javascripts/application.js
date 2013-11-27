@@ -120,16 +120,18 @@ $( document ).ready(function() {
     $.getJSON( jsonURL, function( data ) {
       $("#country-name").html(data.name);
       $("#capital-city").html(data.capital);
-      $("#population").html(data.population);
+      $("#population").html(numberWithCommas(data.population));
       $("#currency").html(data.currency);
       $("#time-zone").html(data.timezones);
-      $("#country-details").show()
-
+      $("#country-details").show()        
     });
   }
 
 
-
+  //  Number With Commas
+  function numberWithCommas(number) {
+    return number.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
+  }  
 }); //eo:doc ready
 
 // Window Resize

@@ -71,6 +71,10 @@
   z-index: 999;
 }
 
+#country-details {
+  display: none;
+}
+
 footer {
   margin-top: 40px;
   padding: 40px 0;
