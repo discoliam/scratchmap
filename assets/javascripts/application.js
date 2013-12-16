@@ -23,7 +23,8 @@ $( document ).ready(function() {
   
   // Resize Map
   resizeMap();
-
+ 
+function worldDraw(visitedData) {
   // Draw Map
   worldMap.vectorMap({
     map: 'world_mill_en',
@@ -54,6 +55,66 @@ $( document ).ready(function() {
     }
   });
 
+} 
+  
+
+// PARSE
+//----------------------
+
+Parse.initialize("y5jeD3z7l6HGvTK8z9yVheML3ymj7wKg3dcsJ2Ij", "E430ZYruAuiGPHH91j9s1RdNL6IjLIq74gjt6bM4");
+
+    function setVisited(code) {
+      var RegionObject = Parse.Object.extend("Region");
+      var regionObject = new RegionObject();
+        regionObject.save({region_code: code, visited: "1"}, {
+        success: function(object) {
+          location.reload();
+        },
+        error: function(model, error) {
+          $(".error").show();
+        }
+      });
+    }
+
+    var visitedData = {};
+    var numberOfVisits = 0;
+
+    function getVisited() {
+      var regionQuery = new Parse.Query("Region");
+      regionQuery.find().then(function(results){
+        // console.log(results[0].get("region_code") + ":" +  results[0].get("visited"));
+        for(var i=0;i < results.length; i++) {
+           visitedData[results[i].get("region_code")] = results[i].get('visited');
+        }
+        numberOfVisits = results.length;
+        console.log(numberOfVisits)
+        // console.log(JSON.stringify(visitedData));
+      }).then(function(){
+        worldDraw(visitedData);
+        percentageVisited();
+      }, function(error){
+        console.log(error.message);
+      })
+    }
+
+    $("#set-visited").click(function(e){
+      setVisited($(this).attr("data-region"));
+      e.preventDefault();
+    })
+
+
+
+getVisited();
+
+
+
+
+
+
+
+
+
+
 
 
   // RESET BUTTON
@@ -68,24 +129,24 @@ $( document ).ready(function() {
 
   // PERCENTAGES
   //----------------------------
-  var total=0;
-  var visited = 0;
-  for (var x in visitedData){
-    if(visitedData.hasOwnProperty(x)){
-      total++;
-      if (visitedData[x] == 1){
-        visited++;
-      }
-    }
-  }
-  var percentage = (visited / total) * 100;
-  var roundedPercenttage = Math.round(percentage);
-  var whatsLeft = 100 - roundedPercenttage;
-  console.log("Total: " + total + " Visited: " + visited + " Percentage: " + roundedPercenttage + "% Left: " + whatsLeft + "%.");
+  function percentageVisited() {
+    var total=198;
 
-  $("em.percentage").html(roundedPercenttage + "%");
-  $("em.visited").html(visited);
-  $("em.total").html(total);
+    var percentage = (numberOfVisits / total) * 100;
+    var roundedPercenttage = Math.round(percentage);
+    var whatsLeft = 100 - roundedPercenttage;
+    // console.log("Total: " + total + " Visited: " + visitedData + " Percentage: " + roundedPercenttage + "% Left: " + whatsLeft + "%.");
+
+    $("em.percentage").html(roundedPercenttage + "%");
+    $("em.visited").html(numberOfVisits);
+    $("em.total").html(total);
+
+  }
+
+
+
+
+  
 
 
   // CHART JS 
@@ -123,7 +184,8 @@ $( document ).ready(function() {
       $("#population").html(numberWithCommas(data.population));
       $("#currency").html(data.currency);
       $("#time-zone").html(data.timezones);
-      $("#country-details").show()        
+      $("#country-details").show()
+      $("#set-visited").attr("data-region", code)        
     });
   }
 
