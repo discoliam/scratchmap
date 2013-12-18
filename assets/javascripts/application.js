@@ -87,7 +87,7 @@ Parse.initialize("y5jeD3z7l6HGvTK8z9yVheML3ymj7wKg3dcsJ2Ij", "E430ZYruAuiGPHH91j
            visitedData[results[i].get("region_code")] = results[i].get('visited');
         }
         numberOfVisits = results.length;
-        console.log(numberOfVisits)
+        //console.log(numberOfVisits)
         // console.log(JSON.stringify(visitedData));
       }).then(function(){
         worldDraw(visitedData);
@@ -110,8 +110,10 @@ getVisited();
 
 
 
-
-
+  // Percentage vars
+    var percentage = 0;
+    var roundedPercenttage = 0;
+    var whatsLeft = 0;
 
 
 
@@ -135,7 +137,7 @@ getVisited();
     var percentage = (numberOfVisits / total) * 100;
     var roundedPercenttage = Math.round(percentage);
     var whatsLeft = 100 - roundedPercenttage;
-    // console.log("Total: " + total + " Visited: " + visitedData + " Percentage: " + roundedPercenttage + "% Left: " + whatsLeft + "%.");
+    console.log("Total: " + total + " Visited: " + visitedData + " Percentage: " + roundedPercenttage + "% Left: " + whatsLeft + "%.");
 
     $("em.percentage").html(roundedPercenttage + "%");
     $("em.visited").html(numberOfVisits);

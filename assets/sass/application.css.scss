@@ -60,9 +60,24 @@
 
 .reset{left: auto;right: 10px;z-index: 999;}
 
+// Legend
+#legend.panel {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  left: 20px;
+  width: 200px;
+}
+
 
 // Hide Country info Panel
 #country-details{display: none;}
+
+// Visited Button Position
+.panel-heading {
+  h3, a.btn {margin: 0;}
+  h3{margin-top: 7px;}
+}
 
 
 // FOOTER
